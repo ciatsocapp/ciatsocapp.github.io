@@ -28,6 +28,7 @@
 			var filepath = "stringconstants.json";
 			var serialized_constantsdict = {};
 			var socappdetailskey;
+            var socappcgiardetailskey1, socappcgiardetailskey2;
 			var socappfundingkey1;
 			var socappfundingkey2;
 			var socappfundingkey3;
@@ -48,6 +49,8 @@
 					serialized_constantsdict = data;
 					
 					socappdetailskey = serialized_constantsdict["introductionkey"];
+                    socappcgiardetailskey1 = serialized_constantsdict["introductioncgiarkey1"];
+                    socappcgiardetailskey2 = serialized_constantsdict["introductioncgiarkey2"];
 					socappfundingkey1 = serialized_constantsdict["socappfundingkey1"];
 					socappfundingkey2 = serialized_constantsdict["socappfundingkey2"];
 					socappfundingkey3 = serialized_constantsdict["socappfundingkey3"];
@@ -55,6 +58,8 @@
 					copyrightkey = serialized_constantsdict["copyrightkey"];
 					
 					$('#psocappdetails').text(socappdetailskey);
+                    $('#psocappcgiardetails1').text(socappcgiardetailskey1);
+                    $('#psocappcgiardetails2').text(socappcgiardetailskey2);
 					$('#psocappfunding1').text(socappfundingkey1);
 					$('#psocappfunding2').text(socappfundingkey2);
 					$('#psocappfunding3').text(socappfundingkey3);
@@ -168,10 +173,12 @@
 						<div class="row">
 							<div class="col-md-12 sub-page-content">
 								<p id="psocappdetails"></p>
+                                <p id="psocappcgiardetails1" style="display:inline";></p>
+                                <a target="_blank" id="psocappcgiardetails2" class="italicfont" style="display:inline;font-size:18px;" href="https://wle.cgiar.org/"></a>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-12 sub-page-content">
+							<div class="col-md-12 sub-page-content btn-form-calc">
 								<button id="btnperformcalculations" onclick="window.location.href='soccomputations.html'" class="btn btn-success btn-sm ladda-button" data-style="expand-left" data-toggle="tooltip" data-placement="top" title="Perform Calculations"><span class="ladda-label">Perform Calculations</span></button>
 							</div>
 						</div>
